@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { IProduto, lprodutos } from '../produtos';
 import { RouterModule } from '@angular/router';
+import { DetalhesProdutoComponent } from './detalhes-produto/detalhes-produto.component';
 
 
 @Component({
@@ -9,7 +10,8 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    DetalhesProdutoComponent,
   ],
   templateUrl: './produtos.component.html',
   styleUrl: './produtos.component.scss'
