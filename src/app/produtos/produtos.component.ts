@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { IProduto, lprodutos } from '../produtos';
+import { Component, OnInit } from '@angular/core';
+import { IProduto } from '../produtos';
 import { RouterModule } from '@angular/router';
 import { DetalhesProdutoComponent } from './detalhes-produto/detalhes-produto.component';
+import { ProdutosService } from '../produto.service';
 
 
 @Component({
@@ -16,6 +17,14 @@ import { DetalhesProdutoComponent } from './detalhes-produto/detalhes-produto.co
   templateUrl: './produtos.component.html',
   styleUrl: './produtos.component.scss'
 })
-export class ProdutosComponent {
-  produtos: IProduto[] = lprodutos;
+export class ProdutosComponent implements OnInit {
+  produtos: IProduto[] | undefined ;
+
+  constructor(
+    private produtosService: ProdutosService
+  ) { }
+
+  ngOnInit(): void {
+    this.produtos = this.produtosService.getAll();
+  } 
 }

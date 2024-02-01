@@ -3,6 +3,7 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProdutosComponent } from './produtos/produtos.component';
+import { MatSnackBarModule } from "@angular/material/snack-bar"
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,7 @@ import { ProdutosComponent } from './produtos/produtos.component';
     HeaderComponent,
     FooterComponent,
     ProdutosComponent,
+    MatSnackBarModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
