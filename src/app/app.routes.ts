@@ -15,8 +15,8 @@ export const routes: Routes = [
 @NgModule ({
     declarations: [],
     imports: [
-        RouterModule.forRoot(routes),
-        //RouterModule.forChild(routes),
+        [RouterModule.forRoot(routes)],
+        RouterModule.forChild(routes),
   ],
     exports: [
         RouterModule,
